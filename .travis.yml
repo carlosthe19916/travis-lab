@@ -1,0 +1,18 @@
+language: java
+notifications:
+  email:
+    if: type = cron OR branch = master
+    recipients:
+      - cferiavi@redhat.com
+    on_success: change
+    on_failure: always
+jdk:
+  - openjdk8
+
+install:
+  - mvn install -DskipTests=true -Dmaven.javadoc.skip=true -B -V
+jobs:
+  include:
+    - stage: Test
+      script:
+        - mvn test
