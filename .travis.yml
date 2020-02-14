@@ -1,7 +1,6 @@
 language: java
 notifications:
   email:
-    if: type = cron OR branch = master
     recipients:
       - cferiavi@redhat.com
     on_success: change
