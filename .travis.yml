@@ -5,7 +5,6 @@ notifications:
     recipients:
       - carlosthe19916@gmail.com
       - cferiavi@redhat.com
-      - windup-eng@redhat.com
       - mrizzi@redhat.com
     on_success: change
     on_failure: always
