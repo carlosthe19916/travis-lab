@@ -1,6 +1,7 @@
 language: java
 notifications:
   email:
+    if: branch = master
     recipients:
       - carlosthe19916@gmail.com
       - cferiavi@redhat.com
