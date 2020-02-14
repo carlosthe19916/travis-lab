@@ -6,6 +6,7 @@ notifications:
       - carlosthe19916@gmail.com
       - cferiavi@redhat.com
       - mrizzi@redhat.com
+      - windup-eng@redhat.com
     on_success: change
     on_failure: always
 jdk:
