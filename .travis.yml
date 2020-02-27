@@ -16,8 +16,11 @@ env:
 install:
   - mvn install -DskipTests=true -Dmaven.javadoc.skip=true -B -V
 
-jobs:
-  include:
-    - stage: Test
-      script:
-        - mvn test
+script:
+  - mvn test
+
+#jobs:
+#  include:
+#    - stage: Test
+#      script:
+#        - mvn test
