@@ -14,7 +14,7 @@ public class ExampleResourceTest {
         given()
           .when().get("/hello")
           .then()
-             .statusCode(205)
+             .statusCode(200)
              .body(is("hello"));
     }
 
