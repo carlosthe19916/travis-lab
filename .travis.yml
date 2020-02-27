@@ -17,7 +17,8 @@ install:
   - mvn install -DskipTests=true -Dmaven.javadoc.skip=true -B -V
 
 script:
-  - mvn test
+  - mvn test -P $TEST_SUITE
+  - echo $TEST_SUITE
 
 #jobs:
 #  include:
