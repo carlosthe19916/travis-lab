@@ -10,8 +10,13 @@ jdk:
   - openjdk8
 
 env:
-  - TEST_SUITE=units
-  - TEST_SUITE=native
+  global:
+    - CAMEL_SPRINGBOOT_TRACING=false
+    - LOGGING_LEVEL_ROOT=info
+    - ANALYSIS_DATAINTEGRITY_LOG=false
+  jobs:
+    - TEST_SUITE=units
+    - TEST_SUITE=native
 
 install:
   - mvn install -DskipTests=true -Dmaven.javadoc.skip=true -B -V
