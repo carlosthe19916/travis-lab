@@ -79,7 +79,7 @@
       <id>native</id>
       <activation>
         <property>
-          <name>native</name>
+          <name>env.TEST_SUITE</name>
         </property>
       </activation>
       <build>

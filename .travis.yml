@@ -9,19 +9,16 @@ notifications:
 jdk:
   - openjdk8
 
-env:
-  - TEST_SUITE=units
-  - TEST_SUITE=integration
-
 install:
   - mvn install -DskipTests=true -Dmaven.javadoc.skip=true -B -V
 
-script:
-  - mvn test -P $TEST_SUITE
-  - echo $TEST_SUITE
-
-#jobs:
-#  include:
-#    - stage: Test
-#      script:
-#        - mvn test
+jobs:
+  include:
+    - stage: Test
+      env:
+        - TEST_SUITE=units
+        - TEST_SUITE=native
+      script:
+        - mvn test
+    - stage: Release
+      script: echo RELEASING
